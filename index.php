@@ -23,12 +23,12 @@
     <i class="fa-solid fa-layer-group fa-xl cursor-pointer"></i>
 
 </header>
+
 <main class="container-fluid">
 <div class="grid justify-center bg-blue-500">
 <div class="p-5 m-5 text-center align-center justify-center">
         <h1 class="text-5xl font-bold font-roboto text-center lg:text-7xl">Don't let Diabetes </h1><h1 class="text-6xl font-bold font-sans text-center lg:text-7xl text-pink-600">Take your life</h1>
-        <p class="text-3xl font-sans text-center lg:text-5xl mt-2">Take control of it or prevent it</p>
-        
+        <p class="text-3xl font-sans text-center lg:text-5xl mt-2">Take control of it or prevent it</p>      
 <div class="grid grid-cols-1 md:grid-cols-2 mt-4 sm:w-fit sm:mx-auto py-4">
 <button type="button" class="mt-8"><a href="register/" class="font-bold bg-white text-pink-600 hover:bg-pink-600 hover:text-white rounded-full p-3">Control <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
 <button type="button" class="mt-8"><a href="learn/" class="font-bold bg-white text-green-600 hover:bg-green-600 hover:text-white rounded-full p-3">Learn more <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
@@ -41,9 +41,4 @@
 
 
 </main>
-<footer class="grid item-center justify-center">
-    <a href="register/" class="text-blue-600 font-roboto mt-8">Register now<i class="fa-solid fa-arrow-right"></i></a>
-    <h1 class="text-center text-green-700 font-bold italic font-roboto text-5xl md:text-8xl lg:text-9xl">by <a target="_blank" rel="noopener noreferrer" href="https://davidkivuyo.github.io/portifolio" class="underline decoration-solid">Larason.com</a></h1>
-</footer>
-</body>
-</html>
+<?php require "footer.php";?>
