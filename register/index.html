@@ -7,22 +7,27 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Signup to diabetes monitor</title>
     <style>
+              html{
+        cursor: url(../images/circle-outline.svg),auto !important;
+
+      }
+      a:hover{
+        cursor: url(../images/hand-pointer.svg), auto !important;
+      }
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
 .mygrid{
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   padding: clamp(32px, 5vw, 80px);
         }
-        @keyframes myhero{
-            0%{background-image: linear-gradient(blueviolet,rgb(241, 228, 166),greenyellow);}
-            50%{background-image: linear-gradient(greenyellow,wheat,blueviolet);}
-            100%{background-image: linear-gradient(hotpink,yellow,gray);}
-        }
         .myhero{
-            animation: myhero 10s 1s infinite linear;
+           background-color: rgb(90, 43, 209);
             border: 1rem;
             padding: 5rem;
-            color: blueviolet;
+            color: rgb(31, 29, 34);
             border-radius: 1rem;
             position: relative;
         }
@@ -32,30 +37,32 @@
     </style>
 </head>
 <body>
-<section class="justify-center items-center">
+<section class="">
 <main class="mygrid">
-    <div class="border-0 myhero">
-<a href="../index.html" style="position: absolute; top: 40%; right: 40%;"><h1 class=" font-bold text-5xl font-mono">LOGO</h1></a>
+    <div class="border-0 myhero relative">
+<a href="../index.html" style="position: absolute; top: 35%; right: 30%;"><h1 class="font-bold text-5xl font-mono">LOGO</h1></a>
 </div>
-<div class="myform">
-    <h1 class="text-3xl font-bold font-roboto text-center">Sign up</h1>
-    <div class="p-8">
-<form action="" method="post" class="text-center font-bold justify-center items-center p-2">
-<label class="floating-label">
-  <span>Name</span><br>
-  <input type="text" placeholder="name" class="input input-md mt-2" required>
-</label>
-<label class="floating-label">
-  <span>Email</span><br>
-  <input type="email" placeholder="mail@site.com" class="input input-md mt-2" required>
-</label>
-<label class="floating-label">
-  <span>password</span><br>
-  <input type="password" class="input input-md mt-2" required>
-</label><br/>
-<button type="submit" class="btn btn-secondary mt-2">SIGN UP <i class="fa-solid fa-arrow-right"></i></button>
-</form>
 
+<div class="flex justify-center items-center p-2">
+    
+    <div class="p-8">
+<form action="" method="post" class="text-center font-bold">
+    <h1 class="text-3xl font-bold font-roboto text-center">Sign up</h1>
+    <label for="name">
+  <span>Name</span><br>
+  <input type="text" placeholder="name" class="input input-md" required>
+</label>
+<label for="email">
+  <span>Email</span><br>
+  <input type="email" placeholder="mail@site.com" class="input input-md" required>
+</label>
+<label for="password">
+  <span>password</span><br>
+  <input type="password" class="input input-md" required>
+</label>
+<button type="submit" class="btn btn-secondary mt-4 justify-center items-center text-center">SIGN UP <i class="fa-solid fa-arrow-right"></i></button>
+</form>
+<p class="text-center">Already register? <a href="../login/" class="link link-warning">Login</a></p>
 </div>
 
 </div>
