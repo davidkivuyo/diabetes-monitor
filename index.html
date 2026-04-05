@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="">
 <head>
     <title>
-        diabetes tracker
+        Diabetes Tracker
     </title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-
 .font-roboto {
   font-family: "Roboto", sans-serif;
 }
 .topnav {
+  position: sticky;
   overflow: hidden;
+  top: 0;
+  background-image: linear-gradient(rgb(63, 158, 213),rgb(34, 132, 218),rgb(119, 119, 249));
 }
 
 .topnav a {
@@ -28,7 +30,6 @@
 
 
 .topnav a.active {
-  background-color: #aa04aa;
   color: white;
 }
 
@@ -45,7 +46,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative; position: sticky;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -57,48 +58,104 @@
     text-align: left;
   }
 }
+.mygrid{
+  display: grid;
+  text-align: center;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.iframe{
+  width: 100vw;
+  height: 250px;
+border-radius: 5%;
+padding: 0 0.5rem 0 0.5rem;
+margin-top: 1rem;
+}
+@media(min-width:640px){
+.iframe{
+   width:560px;
+   height:315px;
+   margin-top: 1rem;
+   border-radius: 5%;
+}}
+.centre-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(201, 207, 205); border-radius: 0.5rem; margin: 2rem;
+
+}
+.centre-box h1{
+  padding: 2rem;
+}
     </style>
+
+  <!-- Standard dependencies -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
+  <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
+
 </head>
 <body>
-<header class="bg-blue-500 sticky">
-    
-<nav class="topnav" id="myTopnav">
-   
-    <a href="index.html" class="active"><h2 class="font-mono font-bold text-3xl">LOGO</h2></a>
-         <a href="Learn/" class="hover:bg-gray-800 hover:text-blue-500 font-bold hover:translate-x-1">About diabetes</a>
-    <a href="statistics.html" class="hover:bg-gray-800 hover:text-blue-500 font-bold hover:translate-x-1">Statistics</a>
-    <a href="login/" class="hover:bg-white hover:text-blue-500 hover:translate-x-1">LOGIN <i class="fa-solid fa-sign-in fa-xl"></i></a>
-    <a href="javascript:void(0);" onclick="myFunction()" class="icon"><i class="fa-solid fa-bars fa-xl cursor-pointer"></i></a> 
+  
 
+<nav class="topnav" id="myTopnav">
+    <a href="index.html" class=""><h2 class="font-mono font-bold text-3xl">LOGO</h2></a>
+    <a href="Learn/" class="hover:bg-gray-800 hover:text-blue-500 font-bold hover:translate-x-1">About diabetes</a>
+    <a href="learn/statistics.html" class="hover:bg-gray-800 hover:text-blue-500 font-bold hover:translate-x-1">Statistics</a>
+    <a href="login/" class="hover:text-blue-500 hover:translate-x-[-1]"><button class="btn btn-soft btn-primary">LOGIN <i class="fa-solid fa-sign-in fa-xl"></i></button></button></a>
+    <a href="javascript:void(0);" onclick="myFunction()" class="icon"><i class="fa-solid fa-bars fa-xl"></i></a> 
 </nav>
 
-
-</header>
-
-<main class="container-fluid">
+<div class="container-fluid">
 <div class="grid justify-center bg-blue-500">
 <div class="p-5 m-5 text-center align-center justify-center">
-        <h1 class="text-5xl font-bold font-roboto text-center lg:text-7xl">Don't let Diabetes </h1><h1 class="text-6xl font-bold font-sans text-center lg:text-7xl text-pink-600">Take your life</h1>
-        <p class="text-3xl font-sans text-center lg:text-5xl mt-2">Take control of it or prevent it</p>      
-<div class="grid grid-cols-1 md:grid-cols-2 mt-4 sm:w-fit sm:mx-auto">
-<button type="button" class="mt-8"><a href="register/" class="font-bold bg-white text-pink-600 hover:bg-pink-600 hover:text-white rounded-full p-3">Control <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
+
+<h1 class="text-5xl font-bold font-roboto text-center lg:text-7xl">1 in 9 of the adult population is living with diabetes</h1><h1 class="text-6xl font-bold font-sans text-center lg:text-7xl text-orange-200">where as 4 in 10 are unaware</h1>
+<p class="text-2xl font-sans text-center lg:text-3xl mt-2 font-black">of their condition.</p> 
+<p>Source: <a href="https://idf.org/" class="hover:underline">International Diabetes Federation (IDF)<i class="fa-solid fa-external-link fa-l"></i></a></p>  
+
+<p class="text-2xl font-roboto text-center lg:text-3xl mt-2 text-amber-900 font-bold">That why we are here to continue provide knowledge about diabetes to the community.</p> 
+<div class="grid grid-cols-1 md:grid-cols-2 sm:w-fit sm:mx-auto">
+<button type="button" class="mt-8"><a href="register/" class="font-bold bg-white text-pink-600 hover:bg-pink-600 hover:text-white rounded-full p-3">Diabetes monitor <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
 <button type="button" class="mt-8"><a href="learn/" class="font-bold bg-white text-green-600 hover:bg-green-600 hover:text-white rounded-full p-3">Learn more <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
 </div>
+
 </div>
-</div>    
-<div class="grid">
-    <img src="" alt="">
-    <h1></h1>
+</div>  
 </div>
 
 
+<main>  
+<h1 class="text-center m-3 text-wrap font-bold text-3xl">At first what is <p class="text-green-700 font-bold text-3xl">diabetes</p> and how its categorized</h1>
+<div class="flex justify-center flex-col flex-wrap items-center" >
+<iframe class="iframe" src="https://www.youtube.com/embed/LkHbXHcj5fo?si=7Fjh-Ie40Xlqt4W6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-
+<div class="centre-box">
+<h1 class="text-2xl font-bold text-center">And its just not like that but although we have cured</h1>
+</div>
 </main>
 
-<?php 
-require("footer.php");
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-center">
+<statuspage-widget src="https://larason.statuspage.io/"></statuspage-widget>
+</div>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
