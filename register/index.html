@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,62 +7,61 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Signup to diabetes monitor</title>
     <style>
-              html{
-        cursor: url(../images/circle-outline.svg),auto !important;
-
+html{
+cursor: url(../images/circle-outline.svg),auto !important;
+background-image: url(../images/109c8350-786b-4a71-a406-da787e50cac0-765x765.jpg);
       }
-      a:hover{
-        cursor: url(../images/hand-pointer.svg), auto !important;
+a:hover{
+cursor: url(../images/hand-pointer.svg), auto !important;
       }
 .font-roboto {
-  font-family: "Roboto", sans-serif;
+font-family: "Roboto", sans-serif;
 }
 .mygrid{
   display: grid;
-  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   padding: clamp(32px, 5vw, 80px);
         }
-        .myhero{
-           background-color: rgb(90, 43, 209);
+.myhero{
             border: 1rem;
             padding: 5rem;
             color: rgb(31, 29, 34);
             border-radius: 1rem;
             position: relative;
         }
-        .myform{
-
+.myform{
+background-color: oklch(62.3% 0.214 259.815);
+border-radius: 1rem;
         }
     </style>
 </head>
 <body>
 <section class="">
 <main class="mygrid">
-    <div class="border-0 myhero relative">
-<a href="../index.html" style="position: absolute; top: 35%; right: 30%;"><h1 class="font-bold text-5xl font-mono">LOGO</h1></a>
+    <div class="myhero">
+<a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><h1 class="font-bold text-5xl font-roboto">LOGO</h1></a>
 </div>
 
 <div class="flex justify-center items-center p-2">
     
-    <div class="p-8">
+    <div class="myform p-12">
 <form action="" method="post" class="text-center font-bold">
-    <h1 class="text-3xl font-bold font-roboto text-center">Sign up</h1>
+    <h1 class="text-3xl font-roboto text-center text-orange-200 font-extrabold m-1">Sign up</h1>
     <label for="name">
-  <span>Name</span><br>
+  <span>Name</span></label><br>
   <input type="text" placeholder="name" class="input input-md" required>
-</label>
+<br>
 <label for="email">
-  <span>Email</span><br>
+  <span>Email</span></label><br>
   <input type="email" placeholder="mail@site.com" class="input input-md" required>
-</label>
+<br>
 <label for="password">
-  <span>password</span><br>
+  <span>password</span></label><br>
   <input type="password" class="input input-md" required>
-</label>
-<button type="submit" class="btn btn-secondary mt-4 justify-center items-center text-center">SIGN UP <i class="fa-solid fa-arrow-right"></i></button>
+<br>
+<button type="submit" class="btn mt-2 justify-center items-center text-center hover:text-white text-blue-500 hover:bg-blue-500">SIGN UP <i class="fa-solid fa-sign-in fa-xl"></i></button>
 </form>
-<p class="text-center">Already register? <a href="../login/" class="link link-warning">Login</a></p>
+<p class="text-center mt-2">Already register? <a href="../login/" class="link link-warning">Login</a></p>
 </div>
 
 </div>
@@ -70,7 +69,7 @@
 </section>
 
 <footer>
-    <p class="text-center mt-5">&copy; 2026 Larason systems</p>
+    <p class="italic text-center">image from <a href="https://www.omegahospitals.com/blog/comprehensive-understanding-of-diabetes-mellitus/" class="link">Omega Hospitals</a></p>
 </footer>
 </body>
 </html>
