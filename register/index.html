@@ -1,75 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../output.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Signup to diabetes monitor</title>
+    <title>Signin to diabetes monitor</title>
     <style>
 html{
 cursor: url(../images/circle-outline.svg),auto !important;
-background-image: url(../images/109c8350-786b-4a71-a406-da787e50cac0-765x765.jpg);
-      }
-a:hover{
+scroll-behavior: smooth;
+}
+
+a{
 cursor: url(../images/hand-pointer.svg), auto !important;
       }
+
 .font-roboto {
 font-family: "Roboto", sans-serif;
 }
-.mygrid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  padding: clamp(32px, 5vw, 80px);
-        }
-.myhero{
-            border: 1rem;
-            padding: 5rem;
-            color: rgb(31, 29, 34);
-            border-radius: 1rem;
-            position: relative;
-        }
+
 .myform{
-background-color: oklch(62.3% 0.214 259.815);
+margin: 10rem 0 1rem 0;
+position: relative;
+border: 1px solid;
+padding: 4rem;
 border-radius: 1rem;
-        }
+box-shadow: 2px 2px ;
+}
+
+.center{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main{
+    display: block;
+}
     </style>
 </head>
-<body>
-<section class="">
-<main class="mygrid">
-    <div class="myhero">
-<a href="../index.html" style="display: flex; justify-content: center; align-items: center;"><h1 class="font-bold text-5xl font-roboto">LOGO</h1></a>
-</div>
+<body class="text-center">
+    <div>
+        <main>
+            <div>
+<main>
 
-<div class="flex justify-center items-center p-2">
+
+
+
+<div class="center">
+    <div class="myform">
     
-    <div class="myform p-12">
-<form action="" method="post" class="text-center font-bold">
-    <h1 class="text-3xl font-roboto text-center text-orange-200 font-extrabold m-1">Sign up</h1>
-    <label for="name">
-  <span>Name</span></label><br>
+    
+        <h1 class="text-7xl font-roboto font-extrabold m-1">Sign up</h1>
+        <p class=" mt-2">Already register? <a href="../login/" class="link link-warning">Login <i class="fa-solid fa-arrow-right"></i></a></p><br>
+        
+<form action="" method="post" class=" font-bold">
+<label for="name">
+    Name</label><br>
   <input type="text" placeholder="name" class="input input-md" required>
-<br>
-<label for="email">
-  <span>Email</span></label><br>
+<br><br>
+<label for="email">Email</label><br>
   <input type="email" placeholder="mail@site.com" class="input input-md" required>
-<br>
-<label for="password">
-  <span>password</span></label><br>
+<br><br>
+<label for="password">Password</label><br>
   <input type="password" class="input input-md" required>
-<br>
-<button type="submit" class="btn mt-2 justify-center items-center text-center hover:text-white text-blue-500 hover:bg-blue-500">SIGN UP <i class="fa-solid fa-sign-in fa-xl"></i></button>
+  <h6 class="text-red-600">*please remember it</h6>
+<br><br>
+<button onclick=execute() type="submit" class="btn mt-2 items-center hover:text-white hover:bg-blue-500 border-black"><p id="button">SIGN UP</p> <i class="fa-solid fa-sign-in fa-xl"></i></button>
 </form>
-<p class="text-center mt-2">Already register? <a href="../login/" class="link link-warning">Login</a></p>
 </div>
 
-</div>
-</main>
-</section>
 
-<footer>
-    <p class="italic text-center">image from <a href="https://www.omegahospitals.com/blog/comprehensive-understanding-of-diabetes-mellitus/" class="link">Omega Hospitals</a></p>
+</div>
+
+<footer class="mt-5">
+    <p class="italic">Have a problem? <a href="../support/" class="link">Help</a></p><br>
+    <p><i class="fa-solid fa-arrow-left"></i> <a href="../index.html" class="link link-primary">HOME</a></p>
 </footer>
+
+
+
+
+</main>
+            </div>
+        </main>
+        </div>
+
+<script>
+    function execute(){
+        document.getElementById("button").innerHTML="Thanks for joining.";
+    }
+</script>
+
 </body>
 </html>

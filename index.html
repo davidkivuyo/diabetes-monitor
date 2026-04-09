@@ -86,7 +86,7 @@ margin-top: 1rem;
    border-radius: 5%;
 }}
 .centre-box{
-  display: flex;
+  display: block;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -95,7 +95,11 @@ margin-top: 1rem;
 
 }
 .centre-box h1{
-  padding: 2rem;
+  padding: 2rem 0;
+ 
+}
+main{
+  display: block;
 }
     </style>
 
@@ -140,9 +144,16 @@ margin-top: 1rem;
 <iframe class="iframe" src="https://www.youtube.com/embed/LkHbXHcj5fo?si=7Fjh-Ie40Xlqt4W6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+<div>
+  <main>
+    <div>
 <div class="centre-box">
-<h1 class="text-2xl font-bold text-center">And its just not like that but although we have cured</h1>
+  <h1 class="text-2xl font-bold text-center">And its just not like that but although we have cured</h1>
 </div>
+ </div>
+  </main>
+</div>
+
 </main>
 
 
@@ -158,11 +169,10 @@ margin-top: 1rem;
 
 
 
-<footer>
-    <p class="text-center mt-5">&copy; 2026 Larason systems</p>
-<div class="text-center">
+<footer class="flex flex-row justify-center item-center gap-5">
+    <p class="">&copy; 2026 Larason systems</p>
 <statuspage-widget src="https://larason.statuspage.io/"></statuspage-widget>
-</div>
+
 </footer>
 <script>
 function myFunction() {
