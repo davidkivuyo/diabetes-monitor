@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="aqua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +21,15 @@ font-family: "Roboto", sans-serif;
 }
 
 .myform{
-margin: 10rem 0 1rem 0;
-position: relative;
-border: 1px solid;
-padding: 4rem;
+margin: 5rem 0 1rem 0;
+box-shadow: -5px -5px 2px -2px rgb(120, 118, 112);
 border-radius: 1rem;
-box-shadow: 2px 2px ;
+border: 1px solid rgb(120, 118, 112);
 }
-
+.myform:hover{
+  box-shadow: 5px 5px 2px -2px rgb(120, 118, 112);
+  cursor: url(../images/hand-pointer.svg), auto !important;
+}
 .center{
     display: flex;
   flex-direction: column;
@@ -40,21 +41,16 @@ main{
 }
     </style>
 </head>
-<body class="text-center">
-    <div>
-        <main>
-            <div>
+<body class="text-center text-white">
+
+<!--the form-->
+<div>
 <main>
-
-
-
-
+<div>
+<main>
 <div class="center">
-    <div class="myform">
-    
-    
-        <h1 class="text-7xl font-roboto font-extrabold m-1">Sign up</h1>
-        <p class=" mt-2">Already register? <a href="../login/" class="link link-warning">Login <i class="fa-solid fa-arrow-right"></i></a></p><br>
+    <div class="myform p-8 md:p-12">
+        <h1 class="text-6xl font-roboto font-extrabold m-1">Sign up</h1>
         
 <form action="" method="post" class=" font-bold">
 <label for="name">
@@ -67,17 +63,17 @@ main{
 <label for="password">Password</label><br>
   <input type="password" class="input input-md" required>
   <h6 class="text-red-600">*please remember it</h6>
-<br><br>
+<br>
 <button onclick=execute() type="submit" class="btn mt-2 items-center hover:text-white hover:bg-blue-500 border-black"><p id="button">SIGN UP</p> <i class="fa-solid fa-sign-in fa-xl"></i></button>
-</form>
+</form><br>
+<p class="">Already register? <a href="../login/" class="link link-warning">Login <i class="fa-solid fa-arrow-right"></i></a></p><br>
+
+</div>      
 </div>
-
-
-</div>
-
-<footer class="mt-5">
+<!--the footer-->
+<footer class="m-5">
     <p class="italic">Have a problem? <a href="../support/" class="link">Help</a></p><br>
-    <p><i class="fa-solid fa-arrow-left"></i> <a href="../index.html" class="link link-primary">HOME</a></p>
+    <p> <a href="../index.html" class="link link-warning"><i class="fa-solid fa-arrow-left"></i> HOME</a></p>
 </footer>
 
 
@@ -92,7 +88,10 @@ main{
     function execute(){
         document.getElementById("button").innerHTML="Thanks for joining.";
     }
+           function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
 </script>
-
 </body>
 </html>
