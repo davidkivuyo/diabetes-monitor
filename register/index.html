@@ -1,94 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="aqua">
+<html data-theme="aqua" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../output.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../output.css" rel="stylesheet">
+    <link href="../auth.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
     <title>Signin to diabetes monitor</title>
-    <style>
-html{
-cursor: url(../images/circle-outline.svg),auto !important;
-scroll-behavior: smooth;
-}
 
-a{
-cursor: url(../images/hand-pointer.svg), auto !important;
-      }
-
-.font-roboto {
-font-family: "Roboto", sans-serif;
-}
-
-.myform{
-margin: 5rem 0 1rem 0;
-border-radius: 1rem;
-background-color: rgb(57, 161, 252);
-}
-.center{
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main{
-    display: block;
-}
-    </style>
 </head>
 <body class="text-center text-white">
 
 <!--the form-->
 <div>
-<main>
-<div>
-<main>
-<div class="center">
-    <div class="myform p-8 md:p-12">
-        <h1 class="text-6xl font-roboto font-extrabold m-1">Sign up</h1>
-        
-<form action="" method="post" class="font-bold">
-<label for="name">
-    Name</label><br>
-  <input type="text" placeholder="name" class="input input-md" required>
-<br><br>
-<label for="email">Email</label><br>
-  <input type="email" placeholder="mail@site.com" class="input input-md" required>
-<br><br>
-<label for="password">Password</label><br>
-  <input type="password" class="input input-md" required>
-  <h6 class="text-red-600">*please remember it</h6>
-<br>
-<button onclick=execute() type="submit" class="btn mt-2 items-center hover:text-white hover:bg-blue-500 border-black"><p id="button">SIGN UP</p> <i class="fa-solid fa-sign-in fa-xl"></i></button>
-</form><br>
-<p class="">Already register? <a href="../login/" class="link link-warning">Login <i class="fa-solid fa-arrow-right"></i></a></p><br>
+    <main>
+        <div>
+            <main>
+                <div class="center">
+                    <div class="myform p-8 md:p-12">
+                        <h1 class="text-6xl font-roboto m-1">Sign up</h1>
 
-</div>      
+                        <form action="" class="font-bold" method="post">
+                            <label for="name">
+                                Name</label><br>
+                            <input class="input input-md" placeholder="name" required type="text">
+                            <br><br>
+                            <label for="email">Email</label><br>
+                            <input class="input input-md" placeholder="mail@site.com" required type="email">
+                            <br><br>
+                            <label for="password">Password</label><br>
+                            <input class="input input-md" required type="password">
+                            <h6 class="text-red-600">*please remember it</h6>
+                            <br>
+                            <button class="btn mt-2 items-center htext-white bg-blue-500 border-black"
+                                    onclick=execute()
+                                    type="submit"><p
+                                    id="button">SIGN UP</p> <i class="fa-solid fa-sign-in fa-xl"></i></button>
+                        </form>
+                        <br>
+                        <p class="">Already register? <a class="link link-warning" href="../login/">Login <i
+                                class="fa-solid fa-arrow-right"></i></a></p><br>
+
+                    </div>
+                </div>
+
+
+                <!--the footer-->
+                <footer class="m-5">
+                    <p class="italic">Have a problem? <a class="link" href="../support/">Help</a></p><br>
+                    <p><a class="link link-warning" href="../index.html"><i class="fa-solid fa-arrow-left"></i> HOME</a>
+                    </p>
+                </footer>
+
+
+            </main>
+        </div>
+    </main>
 </div>
 
-
-
-<!--the footer-->
-<footer class="m-5">
-    <p class="italic">Have a problem? <a href="../support/" class="link">Help</a></p><br>
-    <p> <a href="../index.html" class="link link-warning"><i class="fa-solid fa-arrow-left"></i> HOME</a></p>
-</footer>
-
-
-
-
-</main>
-            </div>
-        </main>
-        </div>
-
 <script>
-    function execute(){
-        document.getElementById("button").innerHTML="Thanks for joining.";
+    function execute() {
+        document.getElementById("button").innerHTML = "Thanks for joining.";
     }
-           function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
     }
 </script>
 </body>
