@@ -660,6 +660,9 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
