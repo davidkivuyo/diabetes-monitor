@@ -1215,6 +1215,9 @@
       }
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .input-md {
     @layer daisyui.l1.l2 {
       --size: calc(var(--size-field, 0.25rem) * 10);
@@ -1227,8 +1230,14 @@
       }
     }
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -1654,9 +1663,19 @@
       width: fit-content;
     }
   }
+  .sm\:p-2 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 2);
+    }
+  }
   .sm\:p-10 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:p-20 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 20);
     }
   }
   .md\:grid-cols-2 {
