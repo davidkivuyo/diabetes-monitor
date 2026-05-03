@@ -6,214 +6,15 @@
     </title>
     <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="output.css" rel="stylesheet">
+    <link href="/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/basic.css">
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            cursor: url(images/circle-outline.svg), auto !important;
-        }
-
-        a:hover {
-            cursor: url(images/hand-pointer.svg), auto !important;
-        }
-
-        .font-roboto {
-            font-family: "Roboto", sans-serif;
-        }
-
-        .topnav {
-            position: sticky;
-            overflow: visible;
-            top: 0;
-            background: linear-gradient(135deg, oklch(48.639% 0.19056 265.472) 0%, oklch(35% 0.18 265.472) 100%);
-            box-shadow: 0 4px 20px rgba(88, 74, 172, 0.3);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            min-height: 60px;
-        }
-
-        .topnav a {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            padding: 10px 16px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            margin: 4px;
-        }
-
-        .topnav .logo {
-            margin-right: auto;
-        }
-
-        .topnav .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-
-        .topnav a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .topnav a {
-            color: white;
-        }
-
-        .topnav .icon {
-            display: none;
-            cursor: pointer;
-            padding: 10px;
-            font-size: 24px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav {
-                position: relative;
-            }
-
-            .topnav .icon {
-                display: block;
-                margin-left: auto;
-            }
-
-            .topnav .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background: linear-gradient(135deg, oklch(48.639% 0.19056 265.472) 0%, oklch(35% 0.18 265.472) 100%);
-                padding: 10px;
-                box-shadow: 0 4px 20px rgba(88, 74, 172, 0.3);
-            }
-
-            .topnav.responsive .nav-links {
-                display: flex;
-            }
-
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                display: block;
-            }
-
-            .topnav .nav-links a {
-                width: 100%;
-                text-align: left;
-                padding: 12px 16px;
-            }
-        }
-
-        .iframe {
-            width: 400px;
-            height: 250px;
-            border-radius: 5%;
-            margin-top: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .iframe {
-                width: 560px;
-                height: 315px;
-                margin-top: 1rem;
-                border-radius: 5%;
-            }
-        }
-
-        .center {
-            display: flex;
-            flex-wrap: wrap;
-            text-align: center;
-            margin: 2rem;
-        }
-
-        .centre-box {
-            flex: 50%;
-            background-color: rgb(201, 207, 205);
-            border-radius: 0.5rem;
-
-        }
-
-        .center .second {
-            flex: 50%;
-            border-radius: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .center .second, .centre-box {
-                flex: 100%;
-            }
-        }
-
-        .centre-box h1 {
-            padding: 50px;
-        }
-
-        /*@media(min-width:768px){
-          .centre-box{
-            margin: 2rem 10rem;
-          }
-        }*/
-        main {
-            display: block;
-        }
-
-        .color {
-            color: oklch(22% 0.091 267.935);
-        }
-
-        .bgcolor {
-            background-color: oklch(22% 0.091 267.935);
-        }
-
-        .bgcolor:hover {
-            background-color: white;
-        }
-
-        .article {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-
-        .article2 {
-            width: 560px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 5rem;
-            max-width: 560px;
-            background-color: antiquewhite;
-        }
-    </style>
 </head>
 <body>
+
+<!-- The navigation bar -->
 <nav class="topnav" id="myTopnav">
     <a class="logo" href="index.html"><h2 class="font-mono font-bold text-2xl text-white">LOGO</h2></a>
     <div class="nav-links">
@@ -224,40 +25,44 @@
                     class="fa-solid fa-sign-in"></i></button>
         </a>
     </div>
-    <a class="icon text-white" href="javascript:void(0);" onclick="myFunction()"><i class="fa-solid fa-bars"
-                                                                                    id="menu-icon"></i></a>
+    <a class="icon text-white" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa-solid fa-bars" id="menu-icon"></i></a>
 </nav>
 
+<!-- The hero section -->
 <div class="container-fluid">
-    <div class="grid justify-center" style="background-color: oklch(54.851% 0.22415 265.188);">
-        <div class="p-5 m-5 text-center align-center justify-center">
+    <div class="grid justify-center sm:p-10" style="background-color: oklch(54.851% 0.22415 265.188);">
+        <div class="p-5 m-5 text-left">
 
-            <h1 class="text-5xl font-bold font-roboto text-left lg:text-7xl">1 in 9 of the adult population is living
+            <h1 class="text-5xl font-bold font-roboto lg:text-7xl">1 in 9 of the adult population is living
                 with diabetes</h1>
-            <h1 class="text-6xl font-bold font-sans text-left lg:text-7xl text-orange-200">where as 4 in 10 are
+            <h1 class="text-6xl font-bold font-sans lg:text-7xl text-orange-200">where as 4 in 10 are
                 unaware</h1>
-            <p class="text-2xl font-sans text-left lg:text-3xl mt-2 font-black">of their condition.</p>
-            <p>Source: <a class="hover:underline" href="https://idf.org/">International Diabetes Federation (IDF)<i
+            <p class="text-2xl font-sans lg:text-3xl mt-2 font-black">of their condition.</p>
+            <p class="font-bold">Source: <a class="hover:underline" href="https://idf.org/">International Diabetes Federation (IDF)<i
                     class="fa-solid fa-external-link fa-l"></i></a></p>
 
-            <p class="text-2xl font-roboto text-center lg:text-3xl mt-2 color font-bold">That why we are here to
+            <p class="text-2xl font-roboto lg:text-3xl mt-2 color font-bold">That why we are here to
                 continue provide knowledge about diabetes to the community.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 sm:w-fit sm:mx-auto">
-                <button class="mt-8" type="button"><a
-                        class="font-bold text-white bgcolor hover:text-black rounded-full p-3"
-                        href="register/">Diabetes
+
+            <div class="grid">
+
+                <button class="all-buttons font-bold bg-green-600 text-white rounded-full p-3" type="button">
+                    <a href="register/">Diabetes
                     monitor <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
-                <button class="mt-8" type="button"><a
-                        class="font-bold bg-white text-green-600 hover:bg-green-600 hover:text-white rounded-full p-3"
-                        href="learn/">Learn
+
+                <button class="all-buttons font-bold bg-yellow-900 text-white rounded-full p-3" type="button">
+                    <a href="learn/" 
+                    >Learn
                     more <i class="fa-solid fa-arrow-right fa-xl"></i></a></button>
+
             </div>
 
         </div>
     </div>
 </div>
 
-
+<!-- the main section -->
 <main>
     <h1 class="text-center m-3 text-wrap font-bold text-3xl">At first what is
         diabetes and how its categorized
@@ -270,9 +75,8 @@
                 src="https://www.youtube.com/embed/LkHbXHcj5fo?si=7Fjh-Ie40Xlqt4W6"
                 title="YouTube video player"></iframe>
     </div>
-
     <div>
-        <main>
+        <section>
             <div class="center">
                 <div class="centre-box">
                     <h1 class="text-2xl font-bold">And its just not like that but although we have cured</h1>
@@ -285,18 +89,21 @@
                 </div>
             </div>
             <div class="article">
-                <div class="article2">
+                <div class="article-2">
                     <h1>Diabetes can be inherited or got by a persion due to many factors</h1>
                 </div>
             </div>
-        </main>
+        </section>
     </div>
 
 </main>
 
 
-<footer class="text-center">
-    <p class="">&copy; 2026 Larason systems</p>
+<footer class="text-left">
+<div class="footer-content">
+    <p class="">&copy; 2026 TheLarason</p>
+</div>
+    
 </footer>
 
 

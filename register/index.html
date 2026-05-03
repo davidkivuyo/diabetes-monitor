@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="../output.css" rel="stylesheet">
-    <link href="../auth.css" rel="stylesheet">
+    <link href="../css/output.css" rel="stylesheet">
+    <link href="../css/auth.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
@@ -13,7 +13,7 @@
 </head>
 <body class="text-center text-white">
 
-<!--the form-->
+<!--the form  -->
 <div>
     <main>
         <div>
@@ -22,21 +22,23 @@
                     <div class="myform p-8 md:p-12">
                         <h1 class="text-6xl font-roboto m-1">Sign up</h1>
 
-                        <form action="" class="font-bold" method="post">
+                        <form action="" class="font-bold" method="post" id="registrationForm">
                             <label for="name">
                                 Name</label><br>
-                            <input class="input input-md" placeholder="name" required type="text">
-                            <br><br>
+                            <input  class="input input-md" placeholder="name"  type="text" id="name">
+                            <br>
                             <label for="email">Email</label><br>
-                            <input class="input input-md" placeholder="mail@site.com" required type="email">
-                            <br><br>
+                            <input  class="input input-md" placeholder="mail@site.com"  type="email" id="email">
+                            <br>
                             <label for="password">Password</label><br>
-                            <input class="input input-md" required type="password">
-                            <h6 class="text-red-600">*please remember it</h6>
+                            <input  class="input input-md"  type="password" id="password">
+                            <br>
+                            <label for="confirm">Confirm Password</label><br>
+                            <input  class="input input-md"  type="password" id="confirm">
                             <br>
                             <button class="btn mt-2 items-center htext-white bg-blue-500 border-black"
                                     onclick=execute()
-                                    type="submit"><p
+                                    ><p
                                     id="button">SIGN UP</p> <i class="fa-solid fa-sign-in fa-xl"></i></button>
                         </form>
                         <br>
@@ -61,9 +63,27 @@
 </div>
 
 <script>
-    function execute() {
-        document.getElementById("button").innerHTML = "Thanks for joining.";
-    }
+
+const form = document.getElementById('registrationForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.reportValidity(); 
+    return;
+  }
+
+  const password = document.getElementById('password').value;
+  const confirm = document.getElementById('confirm').value;
+
+  if (password !== confirm) {
+    alert("Passwords do not match!");
+    return;
+  }
+});
+
+    
 
     function toggleMobileMenu() {
         const menu = document.getElementById('mobileMenu');
