@@ -6,12 +6,12 @@ Copyright TheLarason 2026
 }
 
 html {
-    scroll-behavior: smooth;
-  /*  cursor: url(images/circle-outline.svg), auto !important;*/
+  scroll-behavior: smooth;
+  cursor: url(../images/arrowhead.svg) 12 12, auto !important;
 }
 
-/* a:hover {
-    cursor: url(images/hand-pointer.svg), auto !important;
+/*a:hover {
+    cursor: url(../images/hand-pointer.svg) 12 12, auto !important;
 }*/
 
 .font-roboto {
@@ -115,6 +115,14 @@ html {
         padding: 12px 16px;
     }
 }
+.hero{
+    background-image: linear-gradient(rgb(26, 64, 251),rgb(60, 92, 250),rgb(60, 92, 250),rgb(113, 113, 255),rgb(130, 130, 255),#8585ff,white);
+}
+/*iframe styling*/
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
 
 .iframe {
     width: 400px;
@@ -164,7 +172,7 @@ main {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 padding: 2rem;
-gap: 1rem;
+gap: 5px;
 }
 
 .article-1 div{
@@ -191,7 +199,6 @@ footer{
 
 .all-buttons:hover{
 transform: translateY(-5px);
-cursor: pointer;
 box-shadow: 4px 4px rgb(25, 25, 25);
 transition: 0.25s ease;
 }
