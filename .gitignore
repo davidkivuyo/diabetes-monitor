@@ -2,3 +2,5 @@ practice.js
 .idea/
 css/style.css
 *.lock.json
+build/
+.vscode/
